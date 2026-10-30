@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
-import './globals.css';
-export const metadata: Metadata = { title: 'KESHFED | Editorial Luxury Collection', description: 'Keshfed premium iç giyim koleksiyonları. Editorial Luxury v4 demo.', robots: { index: false, follow: false } };
-export default function RootLayout({children}:{children:React.ReactNode}) { return <html lang="tr"><body>{children}</body></html>; }
+import type {Metadata} from 'next';import './globals.css';
+export const metadata:Metadata={metadataBase:new URL('https://keshfed.com'),title:{default:'KESHFED | Premium Kadın İç Giyim, Sütyen & Zarif Koleksiyonlar',template:'%s | KESHFED'},description:'KESHFED premium kadın iç giyim dünyasını keşfedin. Sütyen, bralette, dantel takımlar, gecelik ve ev giyim koleksiyonları. Beden rehberi, zarif tasarımlar ve özel alışveriş deneyimi.',keywords:['kadın iç giyim','sütyen','dantelli sütyen','bralette','iç giyim takımı','gecelik','premium iç giyim','Keshfed'],openGraph:{title:'KESHFED | Kendine Yakışanı Keşfet',description:'Premium iç giyim, modern zarafet ve konfor.',type:'website',locale:'tr_TR',siteName:'KESHFED'},robots:{index:true,follow:true}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="tr"><body>{children}</body></html>}

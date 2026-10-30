@@ -1,45 +1,32 @@
-# KESHFED — Editorial Luxury v4
+# KESHFED — Signature Commerce (v5)
 
-GitHub / Codex / Vercel için hazırlanmış, Next.js 15 + React 19 + TypeScript tabanlı **etkileşimli mağaza demosu**.
+Premium Turkish lingerie ecommerce **functional prototype** using Next.js 15 / React 19 / TypeScript. Built to deploy to Vercel or run in Codex.
 
-## Başlatma
+## Start
 
 ```bash
 npm install
 npm run dev
 ```
 
-Tarayıcıda http://localhost:3000 adresini açın.
+Open http://localhost:3000. For production validation: `npm run typecheck && npm run build`.
 
-## GitHub'a yükleme
+## Implemented, interactive
 
-ZIP'i açın ve `keshfed-editorial-v4` klasörünün **içindeki dosyaları** GitHub deposunun kök dizinine yükleyin. Alternatif:
+- Responsive editorial homepage, navigation, mobile drawer, search, product categories, price/category/collection filters, sorting, 3/4-column grid.
+- 24 sample products, product detail galleries, colors, sizes, stock, price comparisons, wishlist, cart drawer, quantities, delivery, gift wrap, demo coupon **KESHFED10**.
+- Demo checkout with form validation, browser-local order history, account simulation, Fit Studio estimated size calculator, Privé content, Journal, FAQ, contact form demo, shipping, returns, legal placeholders, newsletter browser-local opt-in, and local demo product management panel.
+- LocalStorage persistence for cart, favorites, sample orders, demo accounts, admin price/stock changes.
+- SEO: metadata, Open Graph, Turkish semantic copy, robots and sitemap. Image fallback for unavailable remote editorial photos.
 
-```bash
-git init
-git add .
-git commit -m "Keshfed Editorial Luxury v4 demo"
-git branch -M main
-git remote add origin https://github.com/KULLANICI/DEPO.git
-git push -u origin main
-```
+## Critical production limitations (intentional; not represented as live functionality)
 
-Vercel'de **Add New → Project → Import Git Repository** adımlarını kullanın. Framework otomatik Next.js algılanır; build komutu `npm run build`.
+**This is NOT a production ecommerce backend.** Checkout never charges cards or creates real merchant orders. The account has no server authentication. Admin is an unprotected browser-local demo; it cannot change products for other users. Newsletter/contact forms do not send email. Product imagery is editorial placeholder photography, not photos of the named lingerie products; price, ratings, stock and policies are fictional demo content. Do not market or launch commercially until you add a real database, secure authentication/authorization, real inventory/PIM, payment provider (e.g. iyzico/PayTR), transactional email, shipping/returns services, approved legal/privacy/cookie/consumer-rights documents, and actual product photography.
 
-## Mevcut özellikler
+## Deploy
 
-- Responsive büyük ürün kartları, masaüstü üç sütun / mobil iki sütun
-- Görsel hover alternatifleri, kategori vitrini, büyük hero
-- Kategori / fiyat / indirim filtreleri, sıralama, büyük/kompakt görünüm
-- Ürün detay galerisi, beden seçimi, favoriler
-- Sepet miktarı, kargo, hediye paketi, demo `KESH10` kuponu
-- Sepet ve favoriler için localStorage
-- Dış bağlantıya ihtiyaç duymayan yerel SVG demo ürün konseptleri
+Upload **the contents of this folder**, not the ZIP or its parent directory, to your GitHub repository root. In Vercel import the repository, select Next.js, root `./`, deploy. For Codex, select the repo and ask it to run `npm install && npm run dev` and open browser preview.
 
-## Önemli sınırlamalar
+## Images
 
-Bu sürüm **tasarım prototipidir**: Görseller ürün fotoğrafı değil, temsili SVG konseptleridir. Gerçek ödeme, müşteri hesabı, stok yönetimi, sipariş kayıtları, Shopier, kargo API, admin paneli, doğrulanmış yorumlar ve güvenlik altyapısı yoktur. Fiyatlar ve teslimat seçenekleri örnektir. Canlı satışa açılmadan önce bunların geliştirilmesi ve test edilmesi gerekir.
-
-## Sonraki adım
-
-Gerçek ürün görsellerini `public/images` içine ekleyin veya bir görsel CDN'e bağlayın; `app/page.tsx` içindeki `products` kataloğunda `image` ve `second` yollarını güncelleyin.
+Editorial Unsplash images are remote and may not correspond to product type. They fall back to a designed gradient placeholder on load failure. Replace `lib/data.ts` image mapping and hero CSS before production.
