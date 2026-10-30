@@ -1,2 +1,1 @@
-import Store from '../components/Store';import {products,articles} from '../lib/data';
-export default function Page(){return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'Store',name:'KESHFED',url:'https://keshfed.com',description:'Premium kadın iç giyim ve yaşam stili koleksiyonları',currenciesAccepted:'TRY'})}}/><Store initialProducts={products} articles={articles}/></>}
+import Store from '@/components/Store';export default function Page(){return <Store/>}
