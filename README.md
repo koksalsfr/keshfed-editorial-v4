@@ -1,8 +1,10 @@
 # KESHFED — Signature Commerce (v5)
 
-Premium Turkish lingerie ecommerce **functional prototype** using Next.js 15 / React 19 / TypeScript. Built to deploy to Vercel or run in Codex.
+Premium Turkish lingerie ecommerce **functional prototype** using Next.js 16 / React 19 / TypeScript. Built to deploy to Vercel or run in Codex.
 
 ## Start
+
+Requires Node.js 20.9 or newer (Node.js 24 LTS recommended).
 
 ```bash
 npm install
